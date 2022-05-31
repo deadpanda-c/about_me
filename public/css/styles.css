@@ -1,5 +1,33 @@
+html, body {
+    height: 100%;
+}
+
+/* Header */
+
 #header {
-    height: 300px;
+    height: 100%;
+}
+
+#img-bg {
+    /* margin: 10px; */
+    padding: 10px;
     background-image: url('../assets/bg.png');
+    filter: blur(8px);
+    height: 90%;
+}
+
+.title {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 60px;
+    border: 2px ridge lightgray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title h1 {
+    /* opacity: 2; */
     text-align: center;
+    color: white;
 }
