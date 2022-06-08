@@ -9,6 +9,19 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './index.html'))
 })
 
+app.get('/my_projects', (req, res) => {
+    res.send(path.join(__dirname, './nothing.html'))
+})
+
+app.get('/about_me', (req, res) => {
+    res.sendFile(path.join(__dirname, './nothing.html'))
+})
+
+app.get('/contact_me', (req, res) => {
+    res.sendFile(path.join(__dirname, './nothing.html'))
+})
+
+
 app.listen(port, () => {
-    console.log(`Server is running on ${port}`)
+    console.log(`Website is running on http://localhost:${port}`)
 })
