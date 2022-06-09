@@ -8,20 +8,27 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- <figure class="first_circle"></figure> -->
 
-    <figure class="circle"></figure>
+    <div id="img-bg"></div>
+
     <header id="header">
         <nav>
-            <ul>
-                <li><a href="/my_projects">My projects</a></li>
-                <li><a href="/about_me">About me</a></li>
-                <li><a href="/contact_me">How to contact me</a></li>
+            <ul id="mainul">
+                <li class="source"><a href="/my_projects">My projects</a>
+                    <ul class="menu_deroulant">
+                        <li class="elem">ELEM</li>
+                        <li class="elem">ELEM</li>
+                        <li class="elem">ELEM</li>
+                    </ul>
+                </li>
+                <li class="source"><a href="/about_me">About me</a></li>
+                <li class="source"><a href="/contact_me">How to contact me</a></li>
             </ul>
         </nav>
-        <div id="img-bg"></div>
 
         <div class="title">
-            <h1>Fullstack Developer</h1>
+            <h1>My Portfolio</h1>
         </div>
     </header>
 </body>

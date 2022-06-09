@@ -1,12 +1,16 @@
 html, body {
     height: 100%;
     overflow: hidden;
-    background-color: #535353;
+    /* background-color: #535353; */
+    background-image: url('../assets/bg.png');
+    background-size: cover;
+    background-position: left top;
+    filter: blur(8px);
 }
 
 /* Figure */
 
-.circle {
+.first_circle, .second_circle {
     display: block;
     background-color: #fff;
     border-radius: 50%;
@@ -14,16 +18,31 @@ html, body {
     width: 20px;
     margin: 0;
     position: relative;
-    animation: move_forward 5s infinite;
+}
+
+.first_circle {
+    animation: move_forward 10s infinite;
     animation-timing-function: ease;
 }
 
+.second_circle {
+    animation: move_backward 5s infinite;
+    animation-timing-function: ease;
+
+}
+
 @keyframes move_forward {
+    0% {left: 0%; background-color: darkblue;}
+    50% {left: 98%; background-color: darkred;}
+    100% {left: 0%; background-color: darkblue;}
+}
+
+@keyframes move_backward {
     from {
-        left: 0px;
+        left: 98%;
     }
     to {
-        left: 100%;
+        left: 2%;
     }
 }
 
@@ -35,18 +54,37 @@ html, body {
 
 /* NAVIGATION BAR */
 
+.menu_deroulant {
+    position: absolute;
+    background-color: #1D1D24;
+    width: 10%;
+    text-align: center;
+}
+
+.menu_deroulant{
+    display: none;
+    /* display: block; */
+    text-decoration: none;
+}
+
 #header nav {
     width: 100%;
     height: 10%;
 }
 
-#header nav ul {
-    height: 100%;
+#header nav ul#mainul {
+    background-color: blue;
+    height: 10%;
+    width: 100%;
     display: flex;
     text-align: center;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-#header nav ul li, #header nav ul li a {
+#header nav ul li.source {
     text-decoration: none;
     flex: auto;
     color: white;
@@ -58,18 +96,38 @@ html, body {
     padding: 10px;
 }
 
-#header nav ul li a:hover {
+a {
+    padding: 10px;
+    margin: auto;
+    width: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all;
+    transition-duration: 0.7s;
+}
+
+#header nav ul li:hover{
     cursor: pointer;
     background-color: white;
+}
+
+li.source:hover a {
     color: black;
+}
+
+#header nav ul li:hover ul.menu_deroulant {
+    display: block;
+}
+
+li.source:hover .menu_deroulant li {
+    text-decoration: none;
 }
 
 /* BACKGROUND IMAGE */
 #img-bg {
     /* margin: 10px; */
     padding: 10px;
-    background-image: url('../assets/bg.png');
-    filter: blur(8px);
+   
     height: 90%;
 }
 
