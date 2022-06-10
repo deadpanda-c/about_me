@@ -16,12 +16,6 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Header */
-
-#header {
-    /* height: 90%; */
-}
-
 /* NAVIGATION BAR */
 
 .menu_deroulant {
@@ -69,6 +63,8 @@ html, body {
 }
 
 a {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-left: 10%;
     cursor: pointer;
     font-size: larger;
     display: flex;
@@ -122,7 +118,7 @@ li.source:hover .menu_deroulant li {
 }
 
 .title h1 {
-    text-align: center;
+    font-family: SourceSansPro-Black, Helvetica, Arial;
     color: white;
 }
 

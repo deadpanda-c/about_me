@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/my_projects', (req, res) => {
-    res.sendFile(path.join(__dirname, './nothing.html'))
+    res.sendFile(path.join(__dirname, './projects.html'))
 })
 
 app.get('/about_me', (req, res) => {
