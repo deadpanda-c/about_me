@@ -39,6 +39,8 @@ function get_repos()
                 var language = document.createTextNode(parsed[index_api].language)
                 var description = document.createTextNode(parsed[index_api].description);
 
+
+                new_div.setAttribute('onclick', "window.open('"+parsed[index_api].html_url+"')");
                 // update the page
                 name_repos.appendChild(name)
                 language_repos.appendChild(language)
