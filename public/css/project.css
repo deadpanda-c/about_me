@@ -1,0 +1,96 @@
+/* MAIN CONTENT */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+#content {
+    margin-top: 20%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    text-align: center;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+h2 {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: fit-content;
+    border-bottom: 2px ridge black;
+}
+
+#content ul {
+    width: fit-content;
+    margin: auto;
+}
+
+#content ul li {
+    display: inline-flex;
+    list-style: none;
+}
+
+.show_project {
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-bottom: 2px ridge #000 !important;
+    padding: 20px;
+    transition: all 0.7s;
+}
+
+.show_project:hover, .show_project:focus {
+    background-color: black;
+    color: white;
+    border-bottom-color: white;
+}
+
+
+.repos_content {
+    display: inline-flex;
+    /* width: 100%; */
+}
+
+.nothing {
+    display: none;
+    margin: auto;
+    width: fit-content;
+    padding: 2px;
+    background-color: rgba(173, 216, 230, 0.5);
+}
+
+.nothing p {
+    padding: 10px ;
+}
+
+#web_repos, #unix_repos, #python_repos, #in_progress {
+    display: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#infos_repos {
+    cursor: pointer;
+    padding: 20px;
+    margin-top: 10%;
+    width: fit-content;
+    border: 2px ridge #000;
+    margin: 10px;
+    transition: all;
+    transition-duration: 0.7s;
+}
+
+#infos_repos:hover {
+    box-shadow: 10px 10px black;
+}
+
+
+@media screen and (max-width:600px) {
+    #content {
+        margin-top: 50% !important;
+    }
+}
+

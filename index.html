@@ -3,8 +3,12 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/project.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,8 +28,30 @@
     </div>
 
     <main id="content">
-        
+        <h2>My Projects</h2>
+        <div class="nothing">
+            <p class="error_log">My repos from this categories are in the "In Progress" section ! :)</p>
+        </div>
+        <ul class="project_list">
+            <li><button id="progress" class="show_project progress">In Progress</button>
+            </li>
+            <li><button id="c" class="show_project c">C</button>
+            </li>
+            <li><button id="python" class="show_project python">Python</button>
+            </li>
+            <li><button id="web" class="show_project web">Web</button>
+            </li>
+        </ul>
+        <div class="repos_content">
+            <div id="in_progress">
+            </div>
+            <div id="unix_repos"></div>
+            <div id="python_repos"></div>
+            <div id="web_repos"></div>
+        </div>
     </main>
 </body>
     <script src="js/index.js"></script>
+    <script src="js/project.js"></script>
+
 </html>

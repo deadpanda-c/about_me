@@ -1,15 +1,15 @@
-html,
-body {
+html, body {
     height: 100%;
     width: 100%;
     margin: 0px;
     padding: 0px;
     background-color: #191919;
     overflow-x: hidden;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Source Code Pro', monospace;
 }
 
 /* HEADER */
-
 
 #header {
     width: fit-content;
@@ -22,17 +22,11 @@ body {
 
 #header p {
     color: white;
-}
-
-p {
-    /* position: relative; */
     width: 20em;
     overflow: hidden;
     white-space: nowrap;
     font-family: 'Source Code Pro', monospace;
 }
-
-
 
 .anim0 {
     animation: write 1s steps(100) 1s 1 normal both
@@ -58,7 +52,6 @@ p {
     from {
         width: 0;
     }
-    
     to {
         width: 20em;
     }
@@ -69,7 +62,7 @@ p {
     text-align: center;
 }
 
-button {
+.btn {
     background: none;
     padding: 20px;
     color: white;
@@ -80,12 +73,14 @@ button {
     animation-duration: 1s;
     animation-delay: 3.5s;
     animation-fill-mode: forwards;
+    width: 10em;
     visibility: hidden;
     transition: all;
-    transition-duration: 0.3s;
+    transition-duration: 0.7s;
+    outline: none;
 }
 
-button:hover {
+.btn:hover {
     background-color: white;
     color: #191919;
 }
@@ -100,15 +95,6 @@ button:hover {
     }
 }
 
-/* MAIN CONTENT */
-
-#content {
-    margin-top: 20%;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-}
-
 @media screen and (max-width: 600px) {
     #header {
         left: 2%;
@@ -116,8 +102,5 @@ button:hover {
 
     p {
         font-size: larger !important;
-    }
-    #content {
-        margin-top: 50%;
     }
 }
