@@ -39,16 +39,23 @@ function stockInfoRepos() {
         || repos.language == "CSS"
             || repos.language == "JavaScript")  {
                 web_repos.appendChild(new_div)
+                web_repos.setAttribute("style", "display:none;");
             }
             if (repos.language == "Python") {
                 python_repos.appendChild(new_div)
+                python_repos.setAttribute("style", "display:none;");
+
             }
             if (repos.language == "C") {
                 unix_repos.appendChild(new_div)
+                unix_repos.setAttribute("style", "display:none;");
+
             }
             for (const i in repos.description) {
                 if (repos.description[i] == '(') {
                     inProgress.appendChild(new_div)
+                    inProgress.setAttribute("style", "display:none;");
+
                 }
             }
 
@@ -57,10 +64,6 @@ function stockInfoRepos() {
 }
 
 api_github.onload = stockInfoRepos
-
-api_github.open("get", "https://api.github.com/users/deadpanda-c/repos")
-
-api_github.send()
 
 
 btn_unix.onclick = function () {
@@ -108,3 +111,6 @@ btn_web.onclick = function () {
 
     }
 }
+api_github.open("get", "https://api.github.com/users/deadpanda-c/repos")
+
+api_github.send()
