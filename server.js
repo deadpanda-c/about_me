@@ -1,27 +1,18 @@
-const express = require('express')
-const path = require('path')
+const express = require("express")
+const path = require("path")
+const dotenv = require("dotenv")
 const app = express()
 const port = process.env.PORT || 3000
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname + '/public/')))
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './index.html'))
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"))
 })
-
-app.get('/my_projects', (req, res) => {
-    res.sendFile(path.join(__dirname, './projects.html'))
-})
-
-app.get('/about_me', (req, res) => {
-    res.sendFile(path.join(__dirname, './nothing.html'))
-})
-
-app.get('/contact_me', (req, res) => {
-    res.sendFile(path.join(__dirname, './nothing.html'))
-})
-
 
 app.listen(port, () => {
-    console.log(`Website is running on http://localhost:${port}`)
+    console.log("----------------------------------------------------------------")
+    console.log(`Hey buddy, your server is running at http://localhost:${port}`)
+    console.log("----------------------------------------------------------------")
+
 })
