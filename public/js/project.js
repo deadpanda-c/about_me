@@ -46,7 +46,7 @@ function stockInfoRepos() {
                 python_repos.setAttribute("style", "display:none;");
 
             }
-            if (repos.language == "C") {
+            if (repos.language == "C" || repos.language == "C++") {
                 unix_repos.appendChild(new_div)
                 unix_repos.setAttribute("style", "display:none;");
 
