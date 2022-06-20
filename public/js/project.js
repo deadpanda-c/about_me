@@ -81,7 +81,7 @@ btn_progress.onclick = function () {
     if (inProgress.style.display != "none") {
         inProgress.style.display = "none"
     } else {
-        inProgress.style.display = "inline-flex"
+        inProgress.style.display = "flex"
         web_repos.style.display = "none"
         python_repos.style.display = "none"
         unix_repos.style.display = "none"

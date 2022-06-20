@@ -6,8 +6,9 @@
 
 #content {
     margin-top: 20%;
+    /* margin-bottom: 20%; */
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     background-color: white;
     text-align: center;
 }
@@ -64,6 +65,7 @@ h2 {
 
 #web_repos, #unix_repos, #python_repos, #in_progress {
     display: none;
+    flex-direction:row;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -86,6 +88,9 @@ h2 {
 
 
 @media screen and (max-width:700px) {
+    #web_repos, #unix_repos, #python_repos, #in_progress {
+        flex-direction: column;
+    }
     #content {
         margin-top: 100% !important;
     }
